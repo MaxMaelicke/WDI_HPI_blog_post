@@ -40,14 +40,13 @@ The main findings/achievements are:
 **1. Data Exploration**
   * 88 topics of indicators covering a total of 1,429 indicators.
   * time series from 1960 - 2019
-  * 264 countries
   * more than 50% of data missing in 49 years, including 2017-2019
   --> The analyses refer to the year 2016, as data quality was much better for 2016 than for the following years.
 
 **2. Data Preprocessing**
   * Join WDI and HPI datasets (match differing country names)
   * Deal with missing data (remove columns (indicators) with more than 50% of missing data; impute column mean for remaining NaN values)
-  * Create (and save) custom dataframes for 2016 and for 5 manually created indicator groups
+  * Create (and save) custom dataframes for 2016 and for 6 manually created indicator groups with 42 manually chosen indicators
 
 **3. Correlation between GDP and HPI**
   * Correlation matrix with Seaborn to analyze correlation between "GDP growth  (annual %)", "GDP per capita, PPP (current international $)" and "Happy Planet Index"
@@ -56,8 +55,8 @@ The main findings/achievements are:
 **4. Multiple Linear Regression and Correlation** (despite the name these notebooks also cover the correlation part)
 
 The code in the notebooks starting with "04_Multiple Linear Regression" is identical, but the analyzed datasets differ. The custom dataframes from 02_Data Preprocessing are used for the analyses of economic, education, environment, infrastructure and politics indicators.
-  * 4 strongest HPI-correlating indicators form the infrastructure groups
-  * infrastructure and education groups show the highest absolute correlation coefficients
+  * 3 strongest HPI-correlating indicators form the health group
+  * health, infrastructure and education groups show the highest absolute correlation coefficients
   * in the other groups negative correlation coefficients prevail, which absolute values are lower than the absolute values of the top positive coefficients
   * For some datasets there are multicolinearity problems. However, these can be ignored, as the regression model is not used for prediction but for confirming the findings of the correlation matrix.
   * correlation matrices are created with seaborn and saved into jpg files
