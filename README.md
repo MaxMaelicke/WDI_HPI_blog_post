@@ -10,7 +10,7 @@ The datasets to be analyzed are
 * the Happy Planet Index for 2016 (see https://happyplanetindex.org/),
 * the World Development Indicators (1960 - 2019) by the World Bank (see https://datacatalog.worldbank.org/dataset/world-development-indicators)
 
-My Blog Post can be found on Medium:
+My Blog Post can be found on Medium (so far only the draft as my account is too new to publish): https://medium.com/@max_58709/is-gdp-a-meaningful-measure-for-the-well-being-of-a-country-and-its-citizens-283aa23130f9
 
 This project was conducted in the course of my Data Scientist Nanodegree at Udacity (www.udacity.com).
 
