@@ -41,7 +41,7 @@ The Gross Domestic Product (GDP) is a widely used measure when it comes to compa
   * Which are the most important fields governments should focus on, in order to improve the well-being of both their inhabitants and their country in general?
 
 ### Understanding the dataset
-This step is performed in the Jupyter Notebook __"01_Data Exploration"__.
+This step is performed in the Jupyter Notebook _"01_Data Exploration"_.
 
 The main characteristics of the WDI Dataset are:
   * 88 topics of indicators covering a total of 1,429 indicators.
@@ -55,7 +55,7 @@ As placeholder for the well-being of a country the Happy Planet Index will be ut
 ### Data Preparation
 In order to perform the correlation analyses between WDI and the HPI the two datasets need to be combined. Furthermore, the data has to be properly selected and cleaned.
 
-The following steps are performed in the Jupyter Notebook __"02_Data Preprocessing"__:
+The following steps are performed in the Jupyter Notebook _"02_Data Preprocessing"_:
 
 **Combine datasets**
 
@@ -74,9 +74,9 @@ The following steps are performed in the Jupyter Notebook __"02_Data Preprocessi
 
 ### Modeling / Analyses
 
-In the Jupyter Notebook __"03_Correlation GDP HPI"__ and the notebooks starting with __"04_Multiple Linear Regression"__ both correlation analyses are made and a multiple linear regression model is built.
+In the Jupyter Notebook _"03_Correlation GDP HPI"_ and the notebooks starting with _"04_Multiple Linear Regression"_ both correlation analyses are made and a multiple linear regression model is built.
 
-The code in the notebooks starting with "04_Multiple Linear Regression" is identical, but the analyzed datasets differ. The custom dataframes from __"02_Data Preprocessing"__ are used for the analyses of economic, education, environment, infrastructure and politics indicators.
+The code in the notebooks starting with _"04_Multiple Linear Regression"_ is identical, but the analyzed datasets differ. The custom dataframes from _"02_Data Preprocessing"_ are used for the analyses of economic, education, environment, infrastructure and politics indicators.
 
 **Correlation**
 
@@ -84,7 +84,7 @@ A correlation matrix is crafted with Seaborn and correlation coefficients are pr
   1. the correlation of all indicators (in the group) with the HPI
   2. the correlation of the indicators which are left after the backwards elimination in the multiple linear regression model
 
-**Multiple lineal regression model**
+**Multiple linear regression model**
 
 By utilizing the scikit-learn library the following steps are performed to build a linear regression model:
 
@@ -93,22 +93,24 @@ By utilizing the scikit-learn library the following steps are performed to build
   * use statsmodels library and method of ordinary least squares (OLS) to evaluate model and importance of independent variables before and after backwards elimination
   * backwards elimination 1: remove the independent variables where P-values in the multiple linear regression model are below a certain significance level (standard value = 5%)
   * backwards elimination 2: like backwards elimination1 but ensuring adjusted R² is improved
-  * for some datasets there are multicolinearity problems. However, these can be ignored, as the regression model is not used for prediction but for confirming the findings of the correlation matrix.
+  * for some datasets there are multicolinearity problems. However, these can be ignored, as the regression model is not used for prediction but for confirming the findings of the correlation matrix and it is only looked at the correlations with the HPI.
 
 ### Results
 
-The initial questions are answered by the analyses in the Jupyter Notebook __"03_Correlation GDP HPI"__ and the notebooks starting with __"04_Multiple Linear Regression"__.
+The initial questions are answered by the analyses in the Jupyter Notebook _"03_Correlation GDP HPI"_ and the notebooks starting with _"04_Multiple Linear Regression"_.
 
 * Is GDP a meaningful measure for the well-being of a country?
-  Correlation matrix and correlation coefficients in __"03_Correlation GDP HPI"__ show that there is no significant correlation between "GDP growth  (annual %)", "GDP per capita, PPP (current international $)" and "Happy Planet Index"
+  
+  Correlation matrix and correlation coefficients in _"03_Correlation GDP HPI"_ show that there is no significant correlation between _"GDP growth  (annual %)", "GDP per capita, PPP (current international $)"_ and _"Happy Planet Index"_
 
 * Are there other, maybe more important indicators?
-  The notebooks starting with __"04_Multiple Linear Regression"__ show that there are WDI with significant correlation coefficients relating to HPI. The five best correlation coefficients (absolute value > 0.4) are found for
-    * Life expectancy at birth, total (years)
-    * Access to electricity (% of population)
-    * Primary completion rate, total (% of relevant age group)
-    * People using at least basic drinking water services (% of population)
-    * People using at least basic sanitation services (% of population)
+  
+  The notebooks starting with _"04_Multiple Linear Regression"_ show that there are WDI with significant correlation coefficients relating to HPI. The five best correlation coefficients (absolute value > 0.4) are found for
+    * _Life expectancy at birth, total (years)_
+    * _Access to electricity (% of population)_
+    * _Primary completion rate, total (% of relevant age group)_
+    * _People using at least basic drinking water services (% of population)_
+    * _People using at least basic sanitation services (% of population)_
 
 * Which are the most important fields governments should focus on, in order to improve the well-being of both their inhabitants and their country in general?
   * 3 of the 5 strongest HPI-correlating indicators are from the health group
@@ -117,7 +119,7 @@ The initial questions are answered by the analyses in the Jupyter Notebook __"03
 
 ### Presentation
 
-The Jupyter Notebook __"03_Correlation GDP HPI"__ and the notebooks starting with __"04_Multiple Linear Regression"__ provide correlation matrices which are created with seaborn. They are then saved into into jpg files to be included in the blog article on medium.
+The Jupyter Notebook _"03_Correlation GDP HPI"_ and the notebooks starting with _"04_Multiple Linear Regression"_ provide correlation matrices which are created with seaborn. They are then saved into into jpg files to be included in the blog article on Medium.
 
 My Blog Post can be found on Medium (so far only the draft as my account is too new to publish): https://medium.com/@max_58709/is-gdp-a-meaningful-measure-for-the-well-being-of-a-country-and-its-citizens-283aa23130f9
 
